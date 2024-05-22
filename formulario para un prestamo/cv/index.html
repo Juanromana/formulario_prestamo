@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pagos</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
+</head>
+
+<body>
+  <section><br>
+    <form class ="formulario">
+      <div class="conta px-4 px-lg-5 princi">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6 mt-5 text-center">
+            <h1 clase="titulo ">cliente</h1>
+          </div>
+        </div><br><br>
+        <div class="dato justify-content-center">
+          <div class="row p-1 gx-4 gx-lg-5 md-3">
+            <div class="col-sm-2 p-0 text-center">
+              <b><label for="cliente" id="nombre" class="form-control-label">Nombre:</label></b>
+            </div>
+            <div class="col-sm-3 p-0">
+              <input type="text" class=" form-control form-control-sm" id="cliente" name="cliente" required>
+              <div class="invalid-feedback">
+                por favor ingresa el nombre del cliente</div>
+            </div>
+            <div class="col-sm-2 p-0 text-center">
+              <b><label for="fecha_prestamo" class="form-control-label">Fecha de prestamo:</label></b>
+            </div>
+            <div class="col-sm-2 p-0">
+              <input type="date" class=" form-control form-control-sm" id="fecha_prestamo" name="clientefecha_prestamo"
+                required>
+              <div class="invalid-feedback">
+                por favor ingresa el la fecha del prestamo</div>
+            </div>
+            <div class="col-sm-1 p-0 text-center">
+              <b><label for="interescli" class="form-control-label">Interes:</label></b>
+            </div>
+            <div class="col-sm-1 p-0 ">
+              <input type="number" class=" form-control form-control-sm" id="interescli" name="clienteinterescli"
+                required>
+              <div class="invalid-feedback">
+                por favor ingresa el interres</div>
+            </div>
+          </div>
+        </div><br>
+        <div class="dato justify-content-center">
+          <div class="row p-1 gx-4 gx-lg-5 md-3">
+            <div class="col-sm-2 p-0 text-center">
+              <b><label for="cuopendiente" class="form-control-label">Cuota Pendientes:</label></b>
+            </div>
+            <div class="col-sm-1 p-0">
+              <input type="text" class=" form-control form-control-sm" id="cuopendiente" name="clientecuota_pendiente"
+              readonly required>
+              <div class="invalid-feedback">
+                por favor ingresa las cuotas</div>
+            </div>
+            <div class="col-sm-2 p-0 text-center">
+              <b><label for="valor_prestamo" class="form-control-label">Valor Prestado:</label></b>
+            </div>
+            <div class="col-sm-2 p-0">
+              <input type="number" class=" form-control form-control-sm" id="valorp" name="clientevalor_prestamo"
+                required>
+              <div class="invalid-feedback">
+                por favor ingresa el monto del prestamo</div>
+            </div>
+            <div class="col-sm-2 p-0 text-center">
+              <b><label for="total_pagar" class="form-control-label">Total a Pagar:</label></b>
+            </div>
+            <div class="col-sm-2 p-0 ">
+              <input type="text" class="form-control form-control-sm" id="total" name="clientetotal_pagar" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Button trigger modal -->
+    <div class="text-center">
+      <button type="button" id="botonmodal" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#pagos">
+        PAGAR
+      </button>
+    </div>
+    <!-- Modal -->
+    <form class="formulario2">
+      <div class="modal fade" id="pagos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Realizar Pago</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <section>
+                <div>
+
+                  <div class="m">
+                    <label for="valorpre"></label>
+                    <input type="text" id="valorpre" name="VALOR" class="form-control" placeholder="VALOR A PAGAR" required readonly>
+                  </div>
+                  <div clase="m">
+                    <label for="inter"></label> <br>
+                    <input type="text" id="inter" name="Interes" class="form-control" placeholder="INTERES" required readonly>
+                  </div>
+                  <div clase="m">
+                    <label for="valor"></label> <br>
+                    <input type="text" id="valor" name="pagado" class="form-control" placeholder="valor pagado"
+                      required>
+                  </div>
+                  <div clase="m">
+                    <label for="cuo"></label> <br>
+                    <input type="text" id="cuo" name="cuot" class="form-control" placeholder="cuota" required readonly>
+                  </div>
+                  <div clase="m">
+                    <label for="paca"></label> <br>
+                    <input type="text" id="paca" name="pacapi" class="form-control" placeholder="pago Capital" required readonly>
+                  </div>
+                  <div clase="m">
+                    <label for="vainter"></label> <br>
+                    <input type="text" id="vainter" name="vainteres" class="form-control" placeholder="VALOR INTERES"
+                      required readonly>
+                  </div>
+                  <div clase="m">
+                    <label for="vaac"></label> <br>
+                    <input type="text" id="vaac" name="valor_ac" class="form-control"
+                      placeholder="VALOR ACTUAL DEL PRESTAMO" required readonly>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" id="cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" id="btnguardar" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/pagor.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+</body>
+
+</html>

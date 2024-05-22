@@ -1,0 +1,17 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+}
+.btn {
+    background-color: aquamarine;
+    padding: 40px;
+    color: black;
+    margin: 70px ;
+    align-items: center;
+}
+label{
+    color: aqua;
+    
+}
